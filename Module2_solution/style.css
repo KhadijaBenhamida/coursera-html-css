@@ -1,1 +1,73 @@
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font: 175% helvetica;
+  }
+  .par {
+    position: relative; /* Make the section a positioning context for the title */
 
+    border:  3px solid black;
+    padding:  20px;
+    box-sizing: border-box;
+    width:  100%;
+    background-color: #b3b3b3;
+    margin:  10px;
+    
+  }
+  .container{
+    display: flex;
+    margin:10px;
+    justify-content: space-between;
+  }
+  
+  .first {
+    border:  3px solid black;
+    position: absolute; 
+    top:  0; 
+    right:  0;
+    margin:  0  0px  20px  350px;
+    border-top:   none;
+    border-right:   none;
+    padding:  5px  10px; 
+}
+#one{
+  background-color: #d87a7a;
+}
+#two{
+  background-color: #eb4545;
+
+}
+#three{
+  background-color: #e0f667;
+}
+  @media(min-width:992px){
+      .par {
+        width: calc(33.33% -  20px); /*  3 sections,  20px for margins */
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+      .container {
+          display: flex;
+          flex-direction: row; /* Ensure items are laid out in a row */
+      }
+      .par {
+          width: 50%; /* Adjust the width of the sections to fit side by side */
+      }
+      #p3 {
+          width: 100%; /* Make "sushi" take up the full width */
+      }    
+    
+}
+/* Mobile view */
+  @media (max-width: 767px) {
+      .container {
+          display: flex;
+          flex-direction: column; /* Ensure items are laid out in a column */
+          flex-wrap: nowrap; /* Prevent items from wrapping onto the next line */
+      }
+      .par {
+          width: 100%; /* Make each section take up the full width */
+      }
+  }
